@@ -33,14 +33,14 @@ spec:
     spec:
       containers:
         - name: locust
-          image: gcr.io/cloud-solutions-images/locust-tasks:latest
+          image: gcr.io/ttomsu-dev-spinnaker/locusttest:latest
           env:
             - name: LOCUST_MODE
               key: LOCUST_MODE
               value: master
             - name: TARGET_HOST
               key: TARGET_HOST
-              value: http://workload-simulation-webapp.appspot.com
+              value: # Set me!
           ports:
             - name: loc-master-web
               containerPort: 8089
