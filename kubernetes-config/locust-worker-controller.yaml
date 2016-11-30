@@ -33,7 +33,7 @@ spec:
     spec:
       containers:
         - name: locust
-          image: gcr.io/cloud-solutions-images/locust-tasks:latest
+          image: gcr.io/ttomsu-dev-spinnaker/locusttest:latest
           env:
             - name: LOCUST_MODE
               key: LOCUST_MODE
@@ -43,4 +43,8 @@ spec:
               value: locust-master
             - name: TARGET_HOST
               key: TARGET_HOST
-              value: http://workload-simulation-webapp.appspot.com
+              value: # Set me!
+            - name: ACCESS_TOKEN
+              key: ACCESS_TOKEN
+              value: # Set me!
+
